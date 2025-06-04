@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ventus - A Note of Gratitude</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -15,8 +19,8 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      animation: fadeIn 1.6s ease-in-out forwards;
       opacity: 0;
-      animation: fadeIn 2s ease-in forwards;
     }
 
     @keyframes fadeIn {
@@ -27,19 +31,46 @@
 
     .container {
       max-width: 800px;
-      padding: 40px;
+      padding: 40px 20px;
       text-align: left;
+      animation: contentFade 1.4s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes contentFade {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
     h1 {
       font-size: 2.5em;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: 1.4em;
+      color: #666;
+      margin-bottom: 30px;
     }
 
     p {
       font-size: 1.1em;
-      line-height: 1.6;
-      margin-bottom: 20px;
+      line-height: 1.7;
+      margin-bottom: 18px;
     }
 
     .signature {
@@ -64,6 +95,7 @@
 </head>
 <body>
   <div class="container">
+    <img src="https://i.imgur.com/iex9U7U.jpeg" alt="Thank You Card by Ventus">
     <h1>Ventus</h1>
     <h2>A Note of Gratitude from Ventus</h2>
     <p>Dear Esteemed Customer,</p>
